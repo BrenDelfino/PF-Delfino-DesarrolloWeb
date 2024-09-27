@@ -1,0 +1,6 @@
+// Bloque de propiedades reutilizables
+
+@mixin bordes{
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #212121;
+}

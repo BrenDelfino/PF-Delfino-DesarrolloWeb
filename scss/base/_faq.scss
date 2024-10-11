@@ -1,0 +1,21 @@
+main{
+    .faq{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40vh;
+        background: url(https://t4.ftcdn.net/jpg/04/84/42/59/360_F_484425988_dEKQaTGJCizjF4FsQiLSwEIBwM5cTMya.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 1vh;
+        @include bordes;
+        .consultas, .consulte{
+            color: $color-contraste;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

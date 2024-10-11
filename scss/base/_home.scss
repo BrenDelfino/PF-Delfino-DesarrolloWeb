@@ -31,6 +31,7 @@ header{
                             &:hover{
                                 text-transform: uppercase;
                                 text-decoration: underline;
+                                cursor: pointer;
                             }
                         }
                     }
@@ -53,6 +54,7 @@ footer{
                 &:hover{
                     text-transform: uppercase;
                     text-decoration: underline;
+                    cursor: pointer;
                 }
             }
         }
@@ -66,26 +68,54 @@ footer{
 
 main{
     margin: 0 auto;
-    padding: 20px;
     max-width: 1200px;
     .principio{
         display: flex;
         align-items: center;
-        min-height: 50vh;
-        background: url(https://www.ferreteriahermanoslopez.com/wp-content/uploads/2021/02/Slide-generico-ferreteria.png) no-repeat;
+        justify-content: center;
+        min-height: 70vh;
+        background: url(https://static8.depositphotos.com/1014680/938/i/450/depositphotos_9383295-stock-photo-construction-background.jpg) no-repeat;
         background-position: center;
-        background-size: cover;
-        margin-bottom: 20vh;
+        background-size: contain;
+        margin: 1vh;
     }
     div{
         display: block;
         text-align: center;
+        .nombre{
+            text-shadow: 2px 2px 2px $color-sombras;
+            @media (max-width: 599px) {
+                font-weight: 800;
+                font-size: medium;
+                text-shadow: 2px 2px 5px $color-contraste
+            }
+            &:hover{
+                transform: scale(1.1);
+                cursor: default;
+            }
+        }
+        .slogan{
+            @media (max-width: 599px) {
+                font-weight: 400;
+                font-size: x-small;
+                color: black;
+                text-shadow: 2px 2px 3px $color-contraste;
+            }
+            font-weight: 900;
+            color: $color-contraste;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px $color-sombras;
+            &:hover{
+                transform: scale(1.1);
+                cursor: default;
+            }
+        }
         div{
             p{
                 text-align: center;
             }
             .carousel-item{
-                max-height: 80vh;
+                max-height: 70vh;
                 @media (max-width: 599px) {
                     height: 36vh;
                 }
@@ -105,7 +135,7 @@ main{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 3vh;
         .card{
             margin: 10px;
             flex: 1 1 200px;
@@ -132,7 +162,7 @@ main{
         }
     h2 {
         text-align: center;
-        margin: 30px;
+        margin: 2rem;
         color: $color-secundario;
         text-transform: uppercase;
     }

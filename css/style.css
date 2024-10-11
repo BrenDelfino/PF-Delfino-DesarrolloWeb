@@ -41,6 +41,7 @@ header nav div div ul li {
 header nav div div ul li a:hover {
   text-transform: uppercase;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 footer nav {
@@ -54,6 +55,7 @@ footer ul li {
 footer ul li a:hover {
   text-transform: uppercase;
   text-decoration: underline;
+  cursor: pointer;
 }
 footer p {
   text-align: center;
@@ -63,27 +65,59 @@ footer p {
 
 main {
   margin: 0 auto;
-  padding: 20px;
   max-width: 1200px;
 }
 main .principio {
   display: flex;
   align-items: center;
-  min-height: 50vh;
-  background: url(https://www.ferreteriahermanoslopez.com/wp-content/uploads/2021/02/Slide-generico-ferreteria.png) no-repeat;
+  justify-content: center;
+  min-height: 70vh;
+  background: url(https://static8.depositphotos.com/1014680/938/i/450/depositphotos_9383295-stock-photo-construction-background.jpg) no-repeat;
   background-position: center;
-  background-size: cover;
-  margin-bottom: 20vh;
+  background-size: contain;
+  margin: 1vh;
 }
 main div {
   display: block;
   text-align: center;
 }
+main div .nombre {
+  text-shadow: 2px 2px 2px #212121;
+}
+@media (max-width: 599px) {
+  main div .nombre {
+    font-weight: 800;
+    font-size: medium;
+    text-shadow: 2px 2px 5px white;
+  }
+}
+main div .nombre:hover {
+  transform: scale(1.1);
+  cursor: default;
+}
+main div .slogan {
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px #212121;
+}
+@media (max-width: 599px) {
+  main div .slogan {
+    font-weight: 400;
+    font-size: x-small;
+    color: black;
+    text-shadow: 2px 2px 3px white;
+  }
+}
+main div .slogan:hover {
+  transform: scale(1.1);
+  cursor: default;
+}
 main div div p {
   text-align: center;
 }
 main div div .carousel-item {
-  max-height: 80vh;
+  max-height: 70vh;
 }
 @media (max-width: 599px) {
   main div div .carousel-item {
@@ -105,7 +139,7 @@ main .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 3vh;
 }
 main .cards .card {
   margin: 10px;
@@ -128,7 +162,7 @@ main div div div h1 {
 }
 main h2 {
   text-align: center;
-  margin: 30px;
+  margin: 2rem;
   color: #7e0c1f;
   text-transform: uppercase;
 }
@@ -341,6 +375,27 @@ main .grid-container .item4 form button .btn:hover {
   background-color: #0056b3;
   transform: scale(1.1);
   box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+main .faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  background: url(https://t4.ftcdn.net/jpg/04/84/42/59/360_F_484425988_dEKQaTGJCizjF4FsQiLSwEIBwM5cTMya.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 1vh;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #212121;
+}
+main .faq .consultas, main .faq .consulte {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+main .faq .consultas:hover, main .faq .consulte:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

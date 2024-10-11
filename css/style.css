@@ -72,7 +72,7 @@ main .principio {
   align-items: center;
   justify-content: center;
   min-height: 70vh;
-  background: url(https://static8.depositphotos.com/1014680/938/i/450/depositphotos_9383295-stock-photo-construction-background.jpg) no-repeat;
+  background: url(/img/banner-principal.jpg) no-repeat;
   background-position: center;
   background-size: contain;
   margin: 1vh;
@@ -382,7 +382,7 @@ main .faq {
   align-items: center;
   justify-content: center;
   min-height: 40vh;
-  background: url(https://t4.ftcdn.net/jpg/04/84/42/59/360_F_484425988_dEKQaTGJCizjF4FsQiLSwEIBwM5cTMya.jpg) no-repeat;
+  background: url(/img/banner-dudas.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   margin: 1vh;

@@ -30,6 +30,7 @@ header{
                         a{
                             &:hover{
                                 text-transform: uppercase;
+                                text-decoration: underline;
                             }
                         }
                     }
@@ -51,6 +52,7 @@ footer{
             a{
                 &:hover{
                     text-transform: uppercase;
+                    text-decoration: underline;
                 }
             }
         }
@@ -62,10 +64,19 @@ footer{
     }
 }
 
-main {
+main{
     margin: 0 auto;
     padding: 20px;
     max-width: 1200px;
+    .principio{
+        display: flex;
+        align-items: center;
+        min-height: 50vh;
+        background: url(https://www.ferreteriahermanoslopez.com/wp-content/uploads/2021/02/Slide-generico-ferreteria.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 20vh;
+    }
     div{
         display: block;
         text-align: center;
@@ -74,11 +85,17 @@ main {
                 text-align: center;
             }
             .carousel-item{
+                max-height: 80vh;
+                @media (max-width: 599px) {
+                    height: 36vh;
+                }
+                @media (min-width: 770px) and (max-width: 1023px) {
+                    height: 45vh;
+                }
                 img{
-                    max-height: 90vh;
                     object-fit: cover;
                     width: 100%;
-                    object-fit: cover;
+                    height: auto;
                     filter: brightness(0.5);
                 }
             }
@@ -117,6 +134,7 @@ main {
         text-align: center;
         margin: 30px;
         color: $color-secundario;
+        text-transform: uppercase;
     }
     p{
         text-align: center;

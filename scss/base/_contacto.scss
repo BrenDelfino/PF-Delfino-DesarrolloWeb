@@ -5,27 +5,33 @@ main{
         grid-template-rows: 1fr 1fr;
         gap: 50px;
         margin: auto;
-        @media (min-width: 770px) and (max-width: 1023px) {
-            grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 599px) {
+            grid-template-columns: 1fr;
+            margin: 2vh;
         }
-        
+        @media (min-width: 770px) and (max-width: 1023px) {
+            margin: 2rem;
+        }
         .item1{
             padding: 20px;
             text-align: center;
-            @media (min-width: 1024px) {
-                padding: 20px;
-            }
-            @media (min-width: 770px) and (max-width: 1023px) {
-                padding: 15px;
-            }
-            @media (max-width: 599px) {
-                grid-template-columns: 1fr;
+            @include bordes;
+            h2{
+                color: $color-principal;
+                &:hover{
+                    transform: scale(1.1);
+                    cursor: default;
+                }
             }
             h3{
                 text-transform: uppercase;
                 text-align: center;
                 margin: 30px;
                 color: $color-principal;
+                &:hover{
+                    transform: scale(1.1);
+                    cursor: default;
+                }
             }
             ul{
                 list-style-type: none;
@@ -57,6 +63,14 @@ main{
             padding: 20px;
             text-align: center;
             @include bordes;
+            h3{
+                color: $color-principal;
+                text-transform: uppercase;
+                &:hover{
+                    transform: scale(1.1);
+                    cursor: default;
+                }
+            }
             @media (min-width: 770px) and (max-width: 1023px) {
                 padding: 15px;
             }
@@ -67,18 +81,17 @@ main{
                 .form-group{
                     font-weight: bold;
                 }
-                button{
-                    .btn{
-                        background-color: #007bff;
-                        color: #fff;
-                        &:hover{
-                            background-color: #0056b3;
-                            transform: scale(1.1);
-                            box-shadow: 5px 5px 5px rgb(0, 0, 0);
-                        }
+                .btn{
+                    background-color: #007bff;
+                    color: #fff;
+                    &:hover{
+                        background-color: #0056b3;
+                        transform: scale(1.1);
+                        box-shadow: 3px 3px 3px rgb(0, 0, 0);
                     }
                 }
-            }   
-        }  
-    }
+            }
+        }   
+    }  
 }
+

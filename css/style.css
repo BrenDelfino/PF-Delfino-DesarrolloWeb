@@ -12,12 +12,7 @@
 }
 
 header nav {
-  display: flex;
   height: 120px;
-  background-color: #e9a474;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
 }
 header nav div a img {
   display: inline-block;
@@ -72,11 +67,13 @@ main .principio {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
-  background: url("../img/banner-principal.jpg") no-repeat;
+  min-height: 50vh;
+  background: url("../img/banner-principal.png") no-repeat;
   background-position: center;
-  background-size: contain;
-  margin: 1vh;
+  background-size: cover;
+  margin: 3vh;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #212121;
 }
 main div {
   display: block;
@@ -84,12 +81,12 @@ main div {
 }
 main div .nombre {
   text-shadow: 2px 2px 2px #212121;
+  letter-spacing: 6px;
 }
 @media (max-width: 599px) {
   main div .nombre {
-    font-weight: 800;
-    font-size: medium;
-    text-shadow: 2px 2px 5px white;
+    font-size: large;
+    text-shadow: 1px 1px 2px #212121;
   }
 }
 main div .nombre:hover {
@@ -98,20 +95,19 @@ main div .nombre:hover {
 }
 main div .slogan {
   font-weight: 900;
-  color: white;
+  color: black;
   text-transform: uppercase;
-  text-shadow: 2px 2px 3px #212121;
+  text-shadow: 2px 2px 3px white;
 }
 @media (max-width: 599px) {
   main div .slogan {
-    font-weight: 400;
+    font-weight: 700;
     font-size: x-small;
-    color: black;
     text-shadow: 2px 2px 3px white;
   }
 }
 main div .slogan:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   cursor: default;
 }
 main div div p {
@@ -119,6 +115,8 @@ main div div p {
 }
 main div div .carousel-item {
   max-height: 70vh;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #212121;
 }
 @media (max-width: 599px) {
   main div div .carousel-item {
@@ -183,11 +181,6 @@ main .grid-container-nosotros {
   gap: 50px;
   margin: 30px;
 }
-@media (min-width: 770px) and (max-width: 1023px) {
-  main .grid-container-nosotros {
-    grid-template-columns: 1fr;
-  }
-}
 @media (max-width: 599px) {
   main .grid-container-nosotros {
     grid-template-columns: 1fr;
@@ -200,12 +193,27 @@ main .grid-container-nosotros .item1 {
   box-shadow: 5px 5px 10px #212121;
   height: 700px;
 }
+@media (max-width: 599px) {
+  main .grid-container-nosotros .item1 {
+    height: 750px;
+  }
+}
+@media (min-width: 770px) and (max-width: 1023px) {
+  main .grid-container-nosotros .item1 {
+    height: 850px;
+  }
+}
 main .grid-container-nosotros .item3-foto {
   width: 100%;
   height: 700px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 5px 5px 10px #212121;
+}
+@media (min-width: 770px) and (max-width: 1023px) {
+  main .grid-container-nosotros .item3-foto {
+    height: 850px;
+  }
 }
 
 main .grid-categorias1 {
@@ -215,13 +223,13 @@ main .grid-categorias1 {
   margin: auto;
   justify-items: space-between;
 }
-@media (min-width: 770px) and (max-width: 1023px) {
+@media (max-width: 599px) {
   main .grid-categorias1 {
-    max-width: 800px;
+    grid-template-columns: 1fr;
     margin: auto;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 770px) and (max-width: 1023px) {
   main .grid-categorias1 {
     grid-template-columns: 1fr;
     margin: auto;
@@ -234,13 +242,13 @@ main .grid-categorias2 {
   margin: auto;
   justify-items: space-between;
 }
-@media (min-width: 770px) and (max-width: 1023px) {
+@media (max-width: 599px) {
   main .grid-categorias2 {
-    max-width: 800px;
+    grid-template-columns: 1fr;
     margin: auto;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 770px) and (max-width: 1023px) {
   main .grid-categorias2 {
     grid-template-columns: 1fr;
     margin: auto;
@@ -253,13 +261,13 @@ main .grid-categorias3 {
   margin: auto;
   justify-items: space-between;
 }
-@media (min-width: 770px) and (max-width: 1023px) {
+@media (max-width: 599px) {
   main .grid-categorias3 {
-    max-width: 800px;
+    grid-template-columns: 1fr;
     margin: auto;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 770px) and (max-width: 1023px) {
   main .grid-categorias3 {
     grid-template-columns: 1fr;
     margin: auto;
@@ -288,35 +296,39 @@ main .grid-container {
   gap: 50px;
   margin: auto;
 }
+@media (max-width: 599px) {
+  main .grid-container {
+    grid-template-columns: 1fr;
+    margin: 2vh;
+  }
+}
 @media (min-width: 770px) and (max-width: 1023px) {
   main .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
   }
 }
 main .grid-container .item1 {
   padding: 20px;
   text-align: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #212121;
 }
-@media (min-width: 1024px) {
-  main .grid-container .item1 {
-    padding: 20px;
-  }
+main .grid-container .item1 h2 {
+  color: #c31632;
 }
-@media (min-width: 770px) and (max-width: 1023px) {
-  main .grid-container .item1 {
-    padding: 15px;
-  }
-}
-@media (max-width: 599px) {
-  main .grid-container .item1 {
-    grid-template-columns: 1fr;
-  }
+main .grid-container .item1 h2:hover {
+  transform: scale(1.1);
+  cursor: default;
 }
 main .grid-container .item1 h3 {
   text-transform: uppercase;
   text-align: center;
   margin: 30px;
   color: #c31632;
+}
+main .grid-container .item1 h3:hover {
+  transform: scale(1.1);
+  cursor: default;
 }
 main .grid-container .item1 ul {
   list-style-type: none;
@@ -355,6 +367,14 @@ main .grid-container .item4 {
   border-radius: 15px;
   box-shadow: 5px 5px 10px #212121;
 }
+main .grid-container .item4 h3 {
+  color: #c31632;
+  text-transform: uppercase;
+}
+main .grid-container .item4 h3:hover {
+  transform: scale(1.1);
+  cursor: default;
+}
 @media (min-width: 770px) and (max-width: 1023px) {
   main .grid-container .item4 {
     padding: 15px;
@@ -368,14 +388,14 @@ main .grid-container .item4 {
 main .grid-container .item4 form .form-group {
   font-weight: bold;
 }
-main .grid-container .item4 form button .btn {
+main .grid-container .item4 form .btn {
   background-color: #007bff;
   color: #fff;
 }
-main .grid-container .item4 form button .btn:hover {
+main .grid-container .item4 form .btn:hover {
   background-color: #0056b3;
   transform: scale(1.1);
-  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  box-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
 
 main .faq {

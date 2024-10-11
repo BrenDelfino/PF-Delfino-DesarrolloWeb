@@ -2,12 +2,7 @@
 
 header{
     nav{
-        display: flex;
         height: 120px;
-        background-color: #e9a474;
-        justify-content: center;
-        align-items: center;
-        z-index: 0;
         div{
             a{
                 img{
@@ -75,21 +70,22 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 70vh;
-        background: url('../img/banner-principal.jpg') no-repeat;
+        min-height: 50vh;
+        background: url('../img/banner-principal.png') no-repeat;
         background-position: center;
-        background-size: contain;
-        margin: 1vh;
+        background-size: cover;
+        margin: 3vh;
+        @include bordes;
     }
     div{
         display: block;
         text-align: center;
         .nombre{
             text-shadow: 2px 2px 2px $color-sombras;
+            letter-spacing: 6px;
             @media (max-width: 599px) {
-                font-weight: 800;
-                font-size: medium;
-                text-shadow: 2px 2px 5px $color-contraste
+                font-size: large;
+                text-shadow: 1px 1px 2px $color-sombras;
             }
             &:hover{
                 transform: scale(1.1);
@@ -98,17 +94,16 @@ main{
         }
         .slogan{
             @media (max-width: 599px) {
-                font-weight: 400;
+                font-weight: 700;
                 font-size: x-small;
-                color: black;
                 text-shadow: 2px 2px 3px $color-contraste;
             }
             font-weight: 900;
-            color: $color-contraste;
+            color: black;
             text-transform: uppercase;
-            text-shadow: 2px 2px 3px $color-sombras;
+            text-shadow: 2px 2px 3px $color-contraste;
             &:hover{
-                transform: scale(1.1);
+                transform: scale(1.2);
                 cursor: default;
             }
         }
@@ -118,6 +113,7 @@ main{
             }
             .carousel-item{
                 max-height: 70vh;
+                @include bordes;
                 @media (max-width: 599px) {
                     height: 36vh;
                 }
